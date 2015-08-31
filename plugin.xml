@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="cordova-plugin-userinfo-android" version="0.0.1">
+        <name>UserInfo</name>
+        <description>Cordova Android UserInfo Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova,UserInfo,android,email,name</keywords>
+        <js-module name="UserInfo" src="www/user_info.js">
+		<clobbers target=""/>
+	</js-module>
+    
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="UserInfo">
+				<param name="android-package" value="com.xarv.android.Info.UserInfo"/>
+			</feature>
+		</config-file>
+		
+		<source-file src="src/android/UserInfo.java" target-dir="src/com/xarv/android/Info" />
+	</platform>
+    </plugin>
