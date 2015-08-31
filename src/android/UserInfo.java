@@ -1,4 +1,15 @@
 package com.xarv.android.Email;
+import java.util.regex.Pattern;
+
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.accounts.Account;
+import android.accounts.AccountManager;
+
 
 public class UserInfo extends CordovaPlugin {
 
