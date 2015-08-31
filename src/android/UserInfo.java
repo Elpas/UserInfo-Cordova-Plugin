@@ -22,7 +22,7 @@ public class UserInfo extends CordovaPlugin {
 	{
 		context=this.cordova.getActivity().getApplicationContext();
 
-		if(action.equals("getEmail")){
+		if(action.equals("email")){
 			String mEmail = null;
 			Pattern emailPattern = Patterns.EMAIL_ADDRESS; // API level 8+
 			Account[] accounts = AccountManager.get(context).getAccounts();
