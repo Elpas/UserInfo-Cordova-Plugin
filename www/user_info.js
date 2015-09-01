@@ -1,3 +1,3 @@
-getInfo = function(action,callback,error,args){
-	cordova.exec(callback,error,"UserInfo",action,[args]);
+getInfo = function(action,success,error,args){
+	cordova.exec(success,error,"UserInfo",action,[args]);
 }

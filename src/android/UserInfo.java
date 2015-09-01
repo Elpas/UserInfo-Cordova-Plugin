@@ -1,4 +1,4 @@
-package com.xarv.android.Email;
+package com.xarv.android.Info;
 import java.util.regex.Pattern;
 
 import org.apache.cordova.CordovaPlugin;
