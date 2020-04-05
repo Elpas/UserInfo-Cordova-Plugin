@@ -10,7 +10,6 @@ import android.util.Patterns;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.Context;
-import android.util.Log;
 
 
 public class UserInfo extends CordovaPlugin {
@@ -39,27 +38,6 @@ public class UserInfo extends CordovaPlugin {
 			}
 			else{
 				callbackContext.error("error fetching email");
-				return false;
-			}
-		}
-		else if(action.equals("google")){
-			String mGoogle = null;
-			
-			Account[] accounts = AccountManager.get(context).getAccounts();
-			for (Account account : accounts) {
-				Log.d("UserInfoPlugin", "Type: " + account.type);
-				Log.d("UserInfoPlugin", "Name: " + account.name);
-				
-				if ("com.google".equalsIgnoreCase(account.type)){
-					mGoogle = account.name;
-			    }
-			}
-			if(mGoogle != null){
-				callbackContext.success(mGoogle);
-				return true;
-			}
-			else{
-				callbackContext.error("error fetching google account");
 				return false;
 			}
 		}
