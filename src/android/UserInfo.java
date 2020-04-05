@@ -10,6 +10,7 @@ import android.util.Patterns;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.Context;
+import android.util.Log;
 
 
 public class UserInfo extends CordovaPlugin {
@@ -46,7 +47,10 @@ public class UserInfo extends CordovaPlugin {
 			
 			Account[] accounts = AccountManager.get(context).getAccounts();
 			for (Account account : accounts) {
-			    if ("com.google".equalsIgnoreCase(account.type)){
+				Log.d("UserInfoPlugin", "Type: " + account.type);
+				Log.d("UserInfoPlugin", "Name: " + account.name);
+				
+				if ("com.google".equalsIgnoreCase(account.type)){
 					mGoogle = account.name;
 			    }
 			}
