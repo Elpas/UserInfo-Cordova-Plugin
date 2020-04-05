@@ -41,6 +41,24 @@ public class UserInfo extends CordovaPlugin {
 				return false;
 			}
 		}
+		else if(action.equals("google")){
+			String mGoogle = null;
+			
+			Account[] accounts = AccountManager.get(context).getAccounts();
+			for (Account account : accounts) {
+			    if ("com.google".equalsIgnoreCase(account.type)){
+					mGoogle = account.name;
+			    }
+			}
+			if(mGoogle != null){
+				callbackContext.success(mGoogle);
+				return true;
+			}
+			else{
+				callbackContext.error("error fetching google account");
+				return false;
+			}
+		}
 		callbackContext.error("Invalid Request");
 		return false;
 	}
