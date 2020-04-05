@@ -1,0 +1,28 @@
+{
+  "name": "UserInfo",
+  "version": "0.0.1",
+  "description": "Cordova Android UserInfo Plugin",
+  "cordova": {
+    "id": "cordova-plugin-userinfo-android",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elpas/UserInfo-Cordova-Plugin.git"
+  },
+  "keywords": [
+    "cordova",
+    "UserInfo",
+    "android",
+    "email",
+    "name"
+  ],
+  "author": "xarv",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Elpas/UserInfo-Cordova-Plugin"
+  },
+  "homepage": "https://github.com/xarv/UserInfo-Cordova-Plugin"
+}
