@@ -10,11 +10,15 @@
 	      </js-module>
 
       	<platform name="android">
-      		<config-file target="res/xml/config.xml" parent="/*">
+      		<config-file target="res/xml/config.xml" parent="/manifest">
       			<feature name="UserInfo">
       				<param name="android-package" value="com.xarv.android.Info.UserInfo"/>
       			</feature>
       		</config-file>
+
+			<config-file target="AndroidManifest.xml" parent="/manifest">
+				<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+			</config-file>
 
       		<source-file src="src/android/UserInfo.java" target-dir="src/com/xarv/android/Info" />
       	</platform>
