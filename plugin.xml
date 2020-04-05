@@ -10,7 +10,7 @@
 	      </js-module>
 
       	<platform name="android">
-      		<config-file target="res/xml/config.xml" parent="/manifest">
+      		<config-file target="res/xml/config.xml" parent="/*">
       			<feature name="UserInfo">
       				<param name="android-package" value="com.xarv.android.Info.UserInfo"/>
       			</feature>
